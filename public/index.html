@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drone Innovators Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Drone<span>Innovators</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#works">Our Works</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#founder">Founder</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <h1>Welcome to <span>Skywatch</span></h1>
+    <p>Redefining Aerial Innovation</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Drone Innovators is at the forefront of drone technology, offering cutting-edge solutions in various sectors like agriculture, surveillance, logistics, and infrastructure. Our mission is to revolutionize industries with our customized drones designed for performance and precision.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service">
+        <h3>Custom Drone Design</h3>
+        <p>We create tailor-made drones suited for specific industry needs, with advanced tech for optimal performance.</p>
+      </div>
+      <div class="service">
+        <h3>Drone Maintenance</h3>
+        <p>Expert maintenance and repair services to ensure your drones are in perfect working condition.</p>
+      </div>
+      <div class="service">
+        <h3>Consulting</h3>
+        <p>Consult with us for the best drone integration strategies for your business and industry.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Works Section -->
+  <section id="works" class="works">
+    <h2>Our Works</h2>
+    <div class="works-grid">
+      <div class="work">
+        <img src="work1.jpg" alt="Work 1">
+        <p>Project 1: Aerial Photography for Real Estate</p>
+      </div>
+      <div class="work">
+        <img src="work2.jpg" alt="Work 2">
+        <p>Project 2: Precision Agriculture Drone Solutions</p>
+      </div>
+      <div class="work">
+        <img src="work3.jpg" alt="Work 3">
+        <p>Project 3: Infrastructure Inspection with Drones</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="achievements">
+    <h2>Our Achievements</h2>
+    <div class="achievements-grid">
+      <div class="achievement">
+        <img src="achievement1.jpg" alt="Achievement 1">
+        <p>Winner of the 2023 Drone Innovation Award</p>
+      </div>
+      <div class="achievement">
+        <img src="achievement2.jpg" alt="Achievement 2">
+        <p>Partnered with Top Technology Firms</p>
+      </div>
+      <div class="achievement">
+        <img src="achievement3.jpg" alt="Achievement 3">
+        <p>Over 100 Successful Drone Projects Delivered</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section id="founder" class="founder">
+    <h2>Meet the Founder</h2>
+    <div class="founder-info">
+      <img src="founder.jpg" alt="Founder" class="founder-photo">
+      <div class="founder-bio">
+        <h3>John Doe</h3>
+        <p>John Doe, the founder of Drone Innovators, is an expert in drone technology with a strong background in aerospace engineering. His passion for innovation and groundbreaking technology led him to build a company dedicated to providing state-of-the-art drone solutions to various industries.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="gallery1.jpg" alt="Gallery Image 1">
+      <img src="gallery2.jpg" alt="Gallery Image 2">
+      <img src="gallery3.jpg" alt="Gallery Image 3">
+    </div>
+  </section>
+
+ <!-- Contact Us Section -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-box">
+    <form id="contact-form" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+  <footer class="footer">
+    <p>&copy; 2024 Drone Innovators. All rights reserved.</p>
+  </footer>
+
+  <script src="server.js"></script>
+</body>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the default form submission
+  
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+  
+    fetch('http://localhost:3000/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, message }), // Send form data as JSON
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Message sent successfully!');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Failed to send message!');
+    });
+  });
+</script>
+</html>

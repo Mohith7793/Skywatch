@@ -1,0 +1,264 @@
+/* General Layout and Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #121212, #1e1e1e); /* Dark background */
+  color: #fff;
+}
+
+/* Header Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(to right, #1c1c1c, #333); /* Dark gradient for navbar */
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1E90FF; /* Blue color on hover */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('hero-background.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background-color: #1E90FF; /* Blue button */
+  padding: 12px 25px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #4169E1; /* Darker blue on hover */
+}
+
+/* Section Styling */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); /* Gradient for sections */
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+/* Service Section */
+.service-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.service {
+  background: linear-gradient(to top, #444, #1c1c1c); /* Gradient for services */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 30%;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  color: #fff; /* White text for service titles */
+}
+
+/* Our Works Section */
+.works-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 30px; /* Added gap between items */
+}
+
+.work {
+  width: 30%;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient for work items: sunset tones */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.work:hover {
+  transform: translateY(-10px); /* Hover effect: Slight lift */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+.work p {
+  margin-top: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Achievements Section */
+.achievements-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 30px; /* Added gap between achievement items */
+}
+
+.achievement {
+  width: 30%;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient for achievements: purple to blue */
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.achievement img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.achievement p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #fff; /* White text for achievement descriptions */
+}
+
+/* Founder Section */
+.founder-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.founder-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #1E90FF; /* Blue border */
+}
+
+.founder-bio {
+  max-width: 600px;
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  background: #222; /* Solid dark background for contact */
+  background: linear-gradient(to top, #222, #333); /* Gradient for contact section */
+}
+
+/* Title for Contact Section */
+.contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Contact Form Box */
+.contact-box {
+  background-color: #333;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Input and Textarea Styles */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1.1em;
+  background-color: #444;
+  color: white;
+  transition: border 0.3s;
+}
+
+/* Focus Effect on Input and Textarea */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1E90FF; /* Focus border with blue */
+  outline: none;
+}
+
+/* Submit Button Styles */
+.contact-form button {
+  padding: 15px 25px;
+  background-color: #1E90FF; /* Blue button */
+  border: none;
+  color: white;
+  font-size: 1.1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #4169E1; /* Darker blue on hover */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to left, #333, #444); /* Gradient for footer */
+}

@@ -3,8 +3,8 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #121212, #1e1e1e); /* Dark background */
-  color: #fff;
+  background: #121212; /* Black background */
+  color: #fff; /* Default text color */
 }
 
 /* Header Navigation */
@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background: linear-gradient(to right, #1c1c1c, #333); /* Dark gradient for navbar */
+  background: #121212; /* Black background for navbar */
   color: white;
 }
 
@@ -27,18 +27,22 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: #fff; /* White color for links */
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .nav-links a:hover {
-  color: #1E90FF; /* Blue color on hover */
+  color: #04619F; /* Deep Water Blue color on hover for readability */
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 .logo {
   font-size: 24px;
   font-weight: 700;
+  background: linear-gradient(to right, #04619F, #6CC9E1); /* Gradient from Deep Water Blue to Aqua for logo */
+  -webkit-background-clip: text;
+  color: transparent; /* Gradient color for logo */
 }
 
 /* Hero Section */
@@ -52,37 +56,49 @@ body {
 .hero h1 {
   font-size: 3.5em;
   margin-bottom: 10px;
+  background: linear-gradient(to right, #04619F, #6CC9E1); /* Gradient for hero heading */
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .hero p {
   font-size: 1.2em;
   margin-bottom: 20px;
+  color: #fff; /* White color for hero paragraph */
 }
 
 .hero .btn {
-  background-color: #1E90FF; /* Blue button */
+  background-color: #04619F; /* Deep Water Blue button */
   padding: 12px 25px;
   text-decoration: none;
   color: white;
   border-radius: 5px;
   font-weight: 500;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .hero .btn:hover {
-  background-color: #4169E1; /* Darker blue on hover */
+  background-color: #FF6347; /* Tomato color on hover */
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
 /* Section Styling */
 section {
   padding: 60px 20px;
   text-align: center;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); /* Gradient for sections */
+  background: #121212; /* Black background for sections */
 }
 
 h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
+  background: linear-gradient(to right, #04619F, #6CC9E1); /* Gradient for section headings */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+p {
+  color: #fff; /* White color for section paragraphs */
 }
 
 /* Service Section */
@@ -94,16 +110,28 @@ h2 {
 }
 
 .service {
-  background: linear-gradient(to top, #444, #1c1c1c); /* Gradient for services */
+  background: #333; /* Dark background */
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 30%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .service h3 {
   margin-bottom: 10px;
-  color: #fff; /* White text for service titles */
+  background: linear-gradient(to right, #04619F, #6CC9E1); /* Gradient for service titles */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.service p {
+  color: #fff; /* White color for service descriptions */
 }
 
 /* Our Works Section */
@@ -111,12 +139,12 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  gap: 30px; /* Added gap between items */
+  gap: 30px;
 }
 
 .work {
   width: 30%;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient for work items: sunset tones */
+  background: #333; /* Dark background */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -131,14 +159,13 @@ h2 {
 }
 
 .work:hover {
-  transform: translateY(-10px); /* Hover effect: Slight lift */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .work p {
   margin-top: 15px;
-  color: #333;
-  font-weight: 500;
+  color: #fff; /* White color for work descriptions */
 }
 
 /* Achievements Section */
@@ -146,12 +173,12 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  gap: 30px; /* Added gap between achievement items */
+  gap: 30px;
 }
 
 .achievement {
   width: 30%;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient for achievements: purple to blue */
+  background: #333; /* Dark background */
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -167,7 +194,7 @@ h2 {
 .achievement p {
   font-size: 1.2em;
   margin-top: 10px;
-  color: #fff; /* White text for achievement descriptions */
+  color: #fff; /* White color for achievement text */
 }
 
 /* Founder Section */
@@ -182,31 +209,30 @@ h2 {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 5px solid #1E90FF; /* Blue border */
+  border: 5px solid #04619F; /* Blue border */
 }
 
 .founder-bio {
   max-width: 600px;
   font-size: 1.2em;
-  color: #ccc;
+  color: #fff; /* White color for bio text */
 }
 
 /* Contact Section */
 .contact {
   padding: 60px 20px;
   text-align: center;
-  background: #222; /* Solid dark background for contact */
-  background: linear-gradient(to top, #222, #333); /* Gradient for contact section */
+  background: #121212; /* Black background */
 }
 
-/* Title for Contact Section */
 .contact h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
-  color: #fff;
+  background: linear-gradient(to right, #04619F, #6CC9E1); /* Gradient for contact heading */
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-/* Contact Form Box */
 .contact-box {
   background-color: #333;
   padding: 40px;
@@ -233,32 +259,39 @@ h2 {
 /* Focus Effect on Input and Textarea */
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #1E90FF; /* Focus border with blue */
+  border-color: #FFD700; /* Focus border color */
   outline: none;
 }
 
 /* Submit Button Styles */
 .contact-form button {
   padding: 15px 25px;
-  background-color: #1E90FF; /* Blue button */
+  background-color: #04619F; /* Deep Water Blue button */
   border: none;
   color: white;
   font-size: 1.1em;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
   width: 100%;
 }
 
 .contact-form button:hover {
-  background-color: #4169E1; /* Darker blue on hover */
+  background-color: #FF6347; /* Tomato color on hover */
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
 /* Footer Styling */
 footer {
-  background-color: #333;
+  background: #121212; /* Black background */
   color: white;
   text-align: center;
   padding: 20px;
-  background: linear-gradient(to left, #333, #444); /* Gradient for footer */
+}
+
+footer h3 {
+  font-size: 1.5em;
+  background: linear-gradient(to right, #04619F, #6CC9E1); /* Gradient for footer heading */
+  -webkit-background-clip: text;
+  color: transparent;
 }
